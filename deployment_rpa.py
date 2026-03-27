@@ -1,10 +1,31 @@
 import streamlit as st
 import streamlit.components.v1 as components
 
-# 1. Configurar la página para que aproveche todo el ancho y se vea como una web real
+# 1. Configurar la página
 st.set_page_config(layout="wide", page_title="Evaluador de Madurez de Automatización")
 
-# 2. Variable que contendrá todo tu código HTML
+# --- INSERTA EL CSS AQUÍ ---
+st.markdown("""
+    <style>
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+        header {visibility: hidden;}
+        /* Esto elimina el espacio superior y lateral de la app */
+        .block-container {
+            padding-top: 0rem;
+            padding-bottom: 0rem;
+            padding-left: 0rem;
+            padding-right: 0rem;
+        }
+        /* Esto elimina el espacio que Streamlit deja entre elementos */
+        .stDeployButton {
+            display:none;
+        }
+    </style>
+""", unsafe_allow_html=True)
+# ---------------------------
+
+# 2. Tu código HTML
 codigo_html = """
 <!DOCTYPE html>
 <html lang="es">
