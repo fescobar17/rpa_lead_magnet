@@ -10,12 +10,19 @@ st.markdown("""
         #MainMenu {visibility: hidden;}
         footer {visibility: hidden;}
         header {visibility: hidden;}
+        
+        /* Igualar el fondo de Streamlit al fondo de tu HTML */
+        [data-testid="stAppViewContainer"] {
+            background-color: #05080c;
+        }
+        
         /* Esto elimina el espacio superior y lateral de la app */
         .block-container {
             padding-top: 0rem;
             padding-bottom: 0rem;
             padding-left: 0rem;
             padding-right: 0rem;
+            max-width: 100%;
         }
         /* Esto elimina el espacio que Streamlit deja entre elementos */
         .stDeployButton {
